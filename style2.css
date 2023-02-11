@@ -1,0 +1,122 @@
+@media(min-width:375px){
+    *{
+        padding: 0;
+        margin:0;
+    }
+    body{
+        background-color:black;
+        height:2310px;
+        overflow-x:hidden;
+       
+    }
+    .menu-button-{
+        background-color:grey;
+        position: fixed;
+        top:40px;
+        border-radius:5px;
+        background:white;
+        right:40px;
+        z-index: 900;
+        width:30px;
+        height: 5px;
+        transition:all .3s ease-in-out;
+    
+    }
+    .back-ward{
+        background-color: black;
+        border:solid 0px;
+        z-index: 900;
+        visibility: visible;
+        top:30px;
+        position: absolute;
+        left:20px;
+        color:white;
+        font-size:30px;
+    }
+    
+    .sidebar-list{
+        z-index: 900;
+        transition: .2s ease;
+        visibility: visible;
+        opacity: 0%;
+        right:-20px;
+        top:75px;
+        background-color:grey;
+        padding-left:10px;
+        height:250px;
+        width:100px;
+        position: fixed;
+    
+    }
+    
+    .sidebar-list li{
+        padding-top:20px;
+        padding-left:19px;
+    
+        list-style: none;
+        
+        
+    }
+    
+    .sidebar-list li a{
+        font-family: 'Roboto', sans-serif;
+        color:white;
+        font-size:20px;
+        text-decoration:none;
+    
+        
+    }
+    .sidebar-list li a:hover{
+        transition:.3s ease;
+        color:#d4d2c9;
+    }
+    #check:checked~.sidebar-list{
+       
+        right:0px;
+        transition:.3s ease;
+        visibility: visible;
+        opacity: 100%;
+    
+    }
+    
+    
+    /*menu animation*/
+    .menu-button-::before,
+    .menu-button-::after{
+        content: '';
+        width:30px;
+        height:5px;
+        top:14px;
+        position: absolute;
+        cursor: pointer;
+        border: black;
+        border-radius: 5px;
+        background-color:white;
+        
+    
+    }
+    
+    #check:checked~.menu-button::before{
+        transform: translate X(40deg);
+    }
+    #check{
+        position: absolute;
+        right:0px;
+        visibility: hidden;
+        z-index: 500;
+    }
+    .menu-button-::before{
+        position: absolute;
+        z-index: 500;
+        cursor: pointer;
+        transform: translateY(-26px);
+       
+    
+    }
+    .menu-button-::after{
+        cursor: pointer;
+        transform: translateY(-2px);
+       
+    }
+    
+}
